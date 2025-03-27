@@ -11,6 +11,5 @@ data "aws_ami" "latest_ami" {
 }
 resource "aws_instance" "myec2test" {
   ami           = data.aws_ami.latest_ami.id
-  instance_type = "t2.micro'
-  key_name = "terraform-key"
+  instance_type = "t2.micro"
 }
